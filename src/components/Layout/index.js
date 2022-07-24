@@ -1,0 +1,32 @@
+import './index.scss'
+import Sidebar from '../Sidebar'
+import { Outlet } from 'react-router-dom'
+
+const Layout = () => {
+  const handleClick = event => {
+    //take the div with the id "sidebar" and toggle its class "active"
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+
+
+  return (
+    <div className="App">
+      <button onClick={handleClick} id="menuToggle">
+        <input type="checkbox" />
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+      </button>
+      <div id='sidebar' className='sidebar'>
+        <Sidebar></Sidebar>
+      </div>
+
+      <div className="page">
+        <Outlet></Outlet>
+      </div>
+    </div>
+  )
+}
+
+export default Layout

@@ -1,0 +1,104 @@
+.home-page {
+
+    @media screen and (min-width: 800px) {
+      .text-zone {
+        position: relative;
+        top: 300px;
+        margin-left: 10%;
+        transform: translateY(-50%);
+      }
+
+      .image-zone {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+  
+        .profile-img{
+          width: 50%;
+          height: 100%;
+          object-fit: cover;
+          border: #ffd700 solid 5px;
+          border-radius: 5%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      .text-zone {
+        position: relative;
+        width: 80%;
+        left: 8%;
+        top: 300px;
+        transform: translateY(-50%);
+      }
+
+      .image-zone {
+        position: absolute;
+        left: 60%;
+        top: 15%;
+        margin-bottom: 100px;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+  
+        .profile-img{
+          width: 50%;
+          height: 100%;
+          object-fit: cover;
+          border: #ffd700 solid 5px;
+          border-radius: 5%;
+        }
+      }
+    }
+
+
+
+
+  
+    h1 {
+      color: #fff;
+      font-size: 56px;
+      line-height: 53px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: 400;
+      cursor: pointer;
+      user-select: none;
+    }
+  
+    h2 {
+      color: #8d8d8d;
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 20px;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+      animation: fadeIn 1s 1.8s backwards;
+    }
+  
+    .flat-button {
+      color: #ffd700;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      font-family: sans-serif;
+      text-decoration: none;
+      padding: 10px 18px;
+      border: 1px solid #ffd700;
+      margin-top: 25px;
+      float: left;
+      animation: fadeIn 1s 2s backwards;
+      white-space: nowrap;
+  
+      &:hover {
+        background: #ffd700;
+        color: #333;
+      }
+    }
+  }
+  
+  
+  
