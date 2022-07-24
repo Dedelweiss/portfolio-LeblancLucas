@@ -1,3 +1,13 @@
 {
-    "i_am": "I'm Leblanc Lucas"
+    "hello": "Hello,",
+    "i_am": "I'm Leblanc Lucas",
+    "web_developer": "Web developer",
+    "full_stack": "Full stack web developer, specialized in Front end",
+    "contact_me": "CONTACT ME",
+    "language": "Language",
+    "french": "French",
+    "english": "English",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
 }
