@@ -39,7 +39,7 @@ const Home = () => {
               idx={23}
             ></AnimatedLetters>
           </h1>
-          <h2>Full stack web developer, specialized in Frontssdsd end</h2>
+          <h2>Full stack web developer, specialized in Test end</h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
