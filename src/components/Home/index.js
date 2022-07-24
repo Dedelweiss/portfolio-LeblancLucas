@@ -4,11 +4,13 @@ import ImageHome from '../../assets/images/profilImgHome.jpg'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t, i18n } = useTranslation();
   const [letterClass, setLetterClass] = useState('text-animate')
   const helloArray = 'Hello,'.split('')
-  const nameArray = "I'm Leblanc Lucas".split('')
+  const nameArray =  t("i_am").split('')
   const jobArray = 'web developer'.split('')
 
   useEffect(() => {
@@ -20,10 +22,20 @@ const Home = () => {
     changeClass()
   }, [])
 
+  const lngs = {
+    fr: { nativeName: 'Français' },
+    en: { nativeName: 'English' }
+  };
+
   return (
     <>
       <div className="container home-page">
         <div className="text-zone">
+        {Object.keys(lngs).map((lng) => (
+            <button key={lng} style={{ fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal' }} type="submit" onClick={() => i18n.changeLanguage(lng)}>
+              {lngs[lng].nativeName}
+            </button>
+          ))}
           <h1>
             <AnimatedLetters letterClass={letterClass} strArray={helloArray} idx={6}></AnimatedLetters>
             <br />
