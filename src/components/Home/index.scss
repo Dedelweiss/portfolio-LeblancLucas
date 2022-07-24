@@ -6,6 +6,11 @@
         top: 300px;
         margin-left: 10%;
         transform: translateY(-50%);
+        cursor: pointer;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
 
       .image-zone {
@@ -33,6 +38,12 @@
         left: 8%;
         top: 300px;
         transform: translateY(-50%);
+        cursor: pointer;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
       }
 
       .image-zone {
@@ -65,7 +76,6 @@
       margin: 0;
       font-family: 'Coolvetica';
       font-weight: 400;
-      cursor: pointer;
       user-select: none;
     }
   
