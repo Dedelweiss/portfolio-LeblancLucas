@@ -4,6 +4,8 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -18,6 +20,17 @@ const Contact = () => {
     changeClass()
   }, [])
 
+  useEffect(() => {
+    const response = localStorage.getItem('res')
+    if (response === 'success') {
+      toast.success("Your message has been sent!", {
+        theme: "colored",
+        icon: "✉️"
+      });
+      localStorage.removeItem('res')
+    }
+  }, [])
+
   const sendEmail = (e) => {
     e.preventDefault()
 
@@ -30,7 +43,7 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert('Your message has been sent!')
+          localStorage.setItem('res', 'success')
           window.location.reload(false)
         },
         () => {
@@ -101,11 +114,22 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="container__col2">
-          </div>
+          <div className="container__col2"></div>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        style={{fontSize:'1rem'}}
+      />
     </>
   )
 }
