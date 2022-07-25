@@ -66,7 +66,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: #ffeba7;
 
         svg {
           opacity: 0;
@@ -116,9 +116,15 @@
       }
     }
 
+    a.career-link {
+      &:after {
+        content: 'CAREER';
+      }
+    }
+
     a.active {
       svg {
-        color: #ffd700;
+        color: #ffeba7;
       }
     }
   }
@@ -142,7 +148,7 @@
         color: #4d4d4e;
 
         &:hover svg {
-          color: #ffd700;
+          color: #ffeba7;
         }
       }
     }
@@ -150,7 +156,7 @@
 
   .dropbtn {
     background-color: transparent;
-    color: #ffd700;
+    color: #ffeba7;
     border: none;
     cursor: pointer;
   }
@@ -158,27 +164,24 @@
   .dropdown {
     position: relative;
     display: inline-block;
-  }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    width: 80px;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      width: 80px;
+    }
   }
 
   .dropdown-content button {
     color: black;
     text-decoration: none;
     display: block;
-    border:none;
+    border: none;
     width: 100%;
   }
 
   .dropdown-content button:hover {
-    background-color: #f1f1f1;
     cursor: pointer;
     border: #e9ac03 solid 1px;
   }

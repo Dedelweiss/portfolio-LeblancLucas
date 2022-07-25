@@ -2,16 +2,10 @@ import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
 import LogoL from '../../assets/images/esr.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faHome, faUser, faTimeline } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { useTranslation } from 'react-i18next'
 
 const Sidebar = () => {
-  const { t, i18n } = useTranslation()
-  const lngs = {
-    fr: { nativeName: t('french') },
-    en: { nativeName: t('english') },
-  }
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
@@ -38,29 +32,17 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="career-link"
+          to="/career"
+        >
+          <FontAwesomeIcon icon={faTimeline} color="#4d4d4e" />
+        </NavLink>
       </nav>
 
       <ul>
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn">{t('language')}</button>
-            <div class="dropdown-content">
-              {Object.keys(lngs).map((lng) => (
-                <button
-                  key={lng}
-                  style={{
-                    fontWeight:
-                      i18n.resolvedLanguage === lng ? 'bold' : 'normal',
-                  }}
-                  type="submit"
-                  onClick={() => i18n.changeLanguage(lng)}
-                >
-                  {lngs[lng].nativeName}
-                </button>
-              ))}
-            </div>
-          </div>
-        </li>
         <li>
           <a
             target="_blank"

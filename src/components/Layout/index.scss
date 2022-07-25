@@ -19,7 +19,7 @@
         h1{
             font-size: 53px;
             font-family: 'Coolvetica';
-            color: #ffd700;
+            color: #ffeba7;
             font-weight: 400;
 
         }
@@ -87,7 +87,7 @@
     width: 55px;
     height: 8px;
     margin-bottom: 10px;
-    background: #ffd700;
+    background: #ffeba7;
     border-radius: 4px;
     -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
     -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
@@ -105,15 +105,15 @@
   }
   
   #menuToggle input:checked ~ #span1 {
-    background-color: #ffd700;
+    background-color: #ffeba7;
     transform: rotate(45deg) translate(8px);
   }
   #menuToggle input:checked ~ #span2 {
-    background-color: #ffd700;
+    background-color: #ffeba7;
     transform: rotate(495deg) translate(4px);   
   }
   #menuToggle input:checked ~ #span3 {
-    background-color: #ffd700;
+    background-color: #ffeba7;
     transform: rotate(45deg);
     opacity: 0;
   }

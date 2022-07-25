@@ -1,14 +1,14 @@
 import './index.scss'
 import Sidebar from '../Sidebar'
+import Dropdown from '../Dropdown'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
-  const handleClick = event => {
-    //take the div with the id "sidebar" and toggle its class "active"
-    const sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("active");
+  const handleClick = (event) => {
+    //take the div with the id "sidebar" and toggle its className "active"
+    const sidebar = document.getElementById('sidebar')
+    sidebar.classList.toggle('active')
   }
-
 
   return (
     <div className="App">
@@ -18,13 +18,13 @@ const Layout = () => {
         <span id="span2"></span>
         <span id="span3"></span>
       </button>
-      <div id='sidebar' className='sidebar'>
+      <div id="sidebar" className="sidebar">
         <Sidebar></Sidebar>
       </div>
-
       <div className="page">
         <Outlet></Outlet>
       </div>
+      <Dropdown></Dropdown>
     </div>
   )
 }
