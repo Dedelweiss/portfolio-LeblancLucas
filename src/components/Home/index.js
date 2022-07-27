@@ -5,6 +5,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import { useTranslation } from 'react-i18next'
+import React from 'react'
 
 const Home = () => {
   const { t } = useTranslation()
@@ -12,6 +13,7 @@ const Home = () => {
   const helloArray = t('hello').split('')
   const nameArray = t('i_am').split('')
   const jobArray = t('web_developer').split('')
+  const filePath = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
 
   useEffect(() => {
     async function changeClass() {
@@ -46,7 +48,8 @@ const Home = () => {
             ></AnimatedLetters>
           </h1>
           <h2>{t('full_stack')}</h2>
-          <Link to="/contact" className="flat-button">
+          <a  className="download-button" href={require("../../assets/files/CV_LeblancLucas.pdf")} download="CV_LeblancLucas.pdf">DOWNLOAD CV</a>
+          <Link to="/contact" className="contact-button">
             {t('contact_me_btn')}
           </Link>
         </div>

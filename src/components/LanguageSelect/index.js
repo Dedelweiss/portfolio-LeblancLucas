@@ -16,7 +16,7 @@ const LanguageSelect = () => {
           id="dropdown"
           name="dropdown"
         />
-        <label className="for-dropdown" for="dropdown">
+        <label className="for-dropdown" htmlFor="dropdown">
           {t('language')}
         </label>
         <div className="section-dropdown">

@@ -64,10 +64,6 @@
         }
       }
     }
-
-
-
-
   
     h1 {
       color: #fff;
@@ -92,7 +88,7 @@
       animation: fadeIn 1s 1.8s backwards;
     }
   
-    .flat-button {
+    .download-button, .contact-button {
       color: #ffeba7;
       font-size: 13px;
       font-weight: 400;
@@ -111,6 +107,11 @@
         color: #333;
       }
     }
+
+    .contact-button{
+      margin-left: 50px;
+    }
+
   }
   
   
