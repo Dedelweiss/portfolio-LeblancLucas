@@ -3,11 +3,16 @@
     "i_am": "Je m'appelle Leblanc Lucas",
     "web_developer": "Développeur web",
     "full_stack": "Développeur web full stack, je me spécialise dans le développement web front-end",
-    "contact_me": "ME CONTACTER",
+    "contact_me_btn": "ME CONTACTER",
     "language": "🇫🇷",
     "french": "Français",
     "english": "Anglais",
     "home": "Acceuil",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "contact_me": "Me contacter",
+    "contact_text": "Actuellement à la recherche d'un stage de janvier à juin 2023 - Je recois avec grand enthousiasme des propositions d'emplois. Cependant, si vous avez d'autres demandes ou questions, n'hésitez pas à me contacter en utilisant le formulaire ci-dessous.",
+    "contact_name": "Nom",
+    "contact_subject": "Sujet",
+    "contact_send": "ENVOYER"
 }

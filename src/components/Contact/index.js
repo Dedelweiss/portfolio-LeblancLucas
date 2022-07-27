@@ -6,10 +6,13 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
+  const contactMeArray = t('contact_me').split('')
 
   useEffect(() => {
     async function changeClass() {
@@ -60,21 +63,19 @@ const Contact = () => {
             <h1>
               <AnimatedLetters
                 letterClass={letterClass}
-                strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
+                strArray={contactMeArray}
                 idx={15}
               />
             </h1>
             <p>
-              I am interested in freelance opportunities - especially ambitious
-              or large projects. However, if you have other request or question,
-              don't hesitate to contact me using below form either.
+              {t('contact_text')}
             </p>
             <div className="contact-form">
               <form ref={form} onSubmit={sendEmail}>
                 <ul>
                   <li className="half">
                     <input
-                      placeholder="Name"
+                      placeholder={t('contact_name')}
                       type="text"
                       name="from_name"
                       id="from_name"
@@ -92,7 +93,7 @@ const Contact = () => {
                   </li>
                   <li>
                     <input
-                      placeholder="Subject"
+                      placeholder={t('contact_subject')}
                       type="text"
                       name="subject"
                       id="subject"
@@ -108,7 +109,7 @@ const Contact = () => {
                     ></textarea>
                   </li>
                   <li>
-                    <input type="submit" className="flat-button" value="SEND" />
+                    <input type="submit" className="flat-button" value={t('contact_send')} />
                   </li>
                 </ul>
               </form>

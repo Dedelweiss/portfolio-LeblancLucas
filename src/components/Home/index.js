@@ -47,7 +47,7 @@ const Home = () => {
           </h1>
           <h2>{t('full_stack')}</h2>
           <Link to="/contact" className="flat-button">
-            {t('contact_me')}
+            {t('contact_me_btn')}
           </Link>
         </div>
         <div className="image-zone">

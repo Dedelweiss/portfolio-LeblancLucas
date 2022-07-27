@@ -1,6 +1,6 @@
 import './index.scss'
 import Sidebar from '../Sidebar'
-import Dropdown from '../Dropdown'
+import LanguageSelect from '../LanguageSelect'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
@@ -24,7 +24,7 @@ const Layout = () => {
       <div className="page">
         <Outlet></Outlet>
       </div>
-      <Dropdown></Dropdown>
+      <LanguageSelect></LanguageSelect>
     </div>
   )
 }
