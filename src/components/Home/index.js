@@ -13,7 +13,6 @@ const Home = () => {
   const helloArray = t('hello').split('')
   const nameArray = t('i_am').split('')
   const jobArray = t('web_developer').split('')
-  const filePath = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
 
   useEffect(() => {
     async function changeClass() {
