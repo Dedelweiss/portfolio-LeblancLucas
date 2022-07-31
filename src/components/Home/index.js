@@ -47,10 +47,18 @@ const Home = () => {
             ></AnimatedLetters>
           </h1>
           <h2>{t('full_stack')}</h2>
-          <a  className="download-button" href={require("../../assets/files/CV_LeblancLucas.pdf")} download="CV_LeblancLucas.pdf">DOWNLOAD CV</a>
-          <Link to="/contact" className="contact-button">
-            {t('contact_me_btn')}
-          </Link>
+          <div className='homeBtns__row'>
+            <a
+              className="download-button homeBtns__col1"
+              href={require('../../assets/files/CV_LeblancLucas.pdf')}
+              download="CV_LeblancLucas.pdf"
+            >
+              DOWNLOAD CV
+            </a>
+            <Link to="/contact" className="contact-button homeBtns__col1">
+              {t('contact_me_btn')}
+            </Link>
+          </div>
         </div>
         <div className="image-zone">
           <img src={ImageHome} alt="Lucas profile" className="profile-img" />

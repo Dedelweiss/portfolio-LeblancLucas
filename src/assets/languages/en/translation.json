@@ -1,18 +1,22 @@
 {
-    "hello": "Hello,",
-    "i_am": "I'm Leblanc Lucas",
-    "web_developer": "Web developer",
-    "full_stack": "Full stack web developer, specialized in Front end",
-    "contact_me_btn": "CONTACT ME",
-    "language": "🇬🇧",
-    "french": "French | 🇫🇷",
-    "english": "English | 🇬🇧",
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact",
-    "contact_me": "Contact me",
-    "contact_text": "Currently looking for an internship from January to June 2023 - I receive job offers with great enthusiasm. However, if you have other request or question, don't hesitate to contact me using below form either.",
-    "contact_name": "Name",
-    "contact_subject": "Subject",
-    "contact_send": "SEND"
+  "hello": "Hello,",
+  "i_am": "I'm Leblanc Lucas",
+  "web_developer": "Web developer",
+  "full_stack": "Full stack web developer, specialized in Front end",
+  "contact_me_btn": "CONTACT ME",
+  "language": "🇬🇧",
+  "french": "French | 🇫🇷",
+  "english": "English | 🇬🇧",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "contact_me": "Contact me",
+  "contact_text": "Currently looking for an internship from January to June 2023 - I receive job offers with great enthusiasm. However, if you have other request or question, don't hesitate to contact me using below form either.",
+  "contact_name": "Name",
+  "contact_subject": "Subject",
+  "contact_send": "SEND",
+  "careerPage": {
+    "career": "Career",
+    "internship": "Internship"
+  }
 }

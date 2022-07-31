@@ -1,0 +1,33 @@
+.career-page {
+  @media screen and (max-width: 800px) {
+    padding-top: 10%;
+    margin-left: 15%;
+    width: 80%;
+  }
+  @media screen and (min-width: 800px) {
+    h1 {
+      text-align: center;
+      width: 15%;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+  }
+  .vertical-timeline-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  .vertical-timeline-technos{
+    
+    .technologiesIcons + .technologiesIcons{
+        margin-left: 10px;
+    }
+    font-size: 1.5rem;
+  }
+}
