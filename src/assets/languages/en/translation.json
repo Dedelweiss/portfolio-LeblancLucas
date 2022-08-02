@@ -17,6 +17,8 @@
   "contact_send": "SEND",
   "careerPage": {
     "career": "Career",
-    "internship": "Internship"
+    "internship": "Internship",
+    "seasonal_job": "Seasonal job",
+    "all": "Show all"
   }
 }

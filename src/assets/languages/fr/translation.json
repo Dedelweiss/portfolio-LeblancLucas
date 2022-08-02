@@ -17,6 +17,8 @@
   "contact_send": "ENVOYER",
   "careerPage": {
     "career": "Parcours",
-    "internship": "Stage"
+    "internship": "Stage",
+    "seasonal_job": "Emploi saisonnier",
+    "all": "Afficher tout"
   }
 }

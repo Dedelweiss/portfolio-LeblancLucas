@@ -1,5 +1,5 @@
 .home-page {
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1030px) {
     .text-zone {
       position: relative;
       top: 300px;
@@ -56,12 +56,12 @@
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1030px) {
     .text-zone {
       position: relative;
       width: 80%;
       left: 8%;
-      top: 300px;
+      top: 400px;
       transform: translateY(-50%);
       cursor: pointer;
       -moz-user-select: none;
@@ -74,7 +74,7 @@
     .image-zone {
       position: absolute;
       left: 60%;
-      top: 15%;
+      top: 25%;
       margin-bottom: 100px;
       transform: translateY(-50%);
       width: 40%;
