@@ -17,6 +17,16 @@
   "contact_send": "SEND",
   "careerPage": {
     "career": "Career",
-    "internship": "Internship"
+    "internship": "Internship",
+    "seasonal_job": "Seasonal job",
+    "all": "Show all"
+  },
+  "aboutPage": {
+    "about_me": "About me",
+    "hobbies": "My hobbies",
+    "paragraph1": "Je suis un étudiant de 22 ans actuellement en dernière année d’ école d’ingénieurs CESI. Je suis passionné par l’innovation, les nouvelles technologies dans les domaines de l’informatique, de l’aéronautique et de l’espace.",
+    "paragraph2": "J’ai eu la chance de beaucoup voyager durant ma vie, de la fraicheur du nord (Normandie, Bretagne) à la chaleur des îles et du Sud (Tahiti et Charente-maritime). Ce qui m’a permis de découvrir tant de choses dont ma soif de nouveautées.",
+    "paragraph3": "J’ai de nombreux passe-temps mais le principal est le sport et plus précisément la course à pied. En effet, j’aime courir depuis mon plus jeune âge, que ça soit lors des cross ou trails de ma région. Ainsi, je prends beaucoup de plaisirs à chercher de nouveaux chemins en montagne ou en forêt mais également trouver de nouvelles techniques afin d’optimiser mon endurance par exemple.",
+    "paragraph4": "Ma passion pour l’aviation et l’espace me permet également d’avoir nombreuses activités en rapport, tel que la lecture des actualités et innovations de ces sujets. Ou encore les discussions avec d’autres passionnés."
   }
 }

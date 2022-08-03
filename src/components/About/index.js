@@ -4,10 +4,12 @@ import Cube from '../Cube'
 import Loader from 'react-loaders'
 import { useState, useEffect } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const { t } = useTranslation()
   const [letterClass, setLetterClass] = useState('text-animate')
-  const aboutArray = 'About me'.split('')
+  const aboutArray = t('aboutPage.about_me').split('')
   useEffect(() => {
     async function changeClass() {
       await setTimeout(() => {
@@ -29,24 +31,11 @@ const About = () => {
                 idx={15}
               />
             </h1>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
+            <p>{t('aboutPage.paragraph1')}</p>
+            <p>{t('aboutPage.paragraph2')}</p>
+            <h2>{t('aboutPage.hobbies')}</h2>
+            <p>{t('aboutPage.paragraph3')}</p>
+            <p>{t('aboutPage.paragraph4')}</p>
           </div>
           <Cube></Cube>
         </div>

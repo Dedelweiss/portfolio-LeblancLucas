@@ -2,7 +2,6 @@
     width: 100%;
     will-change: contents;
     height: 90%;
-    min-height: 566px;
     opacity: 0;
     top: 5%;
     margin: 0 auto;
@@ -22,8 +21,15 @@
             font-family: 'Coolvetica';
             color: #ffeba7;
             font-weight: 400;
-
         }
+
+        h2{
+          font-size: 33px;
+          font-family: 'Coolvetica';
+          color: #ffeba7;
+          font-weight: 400;
+      }
+
 
         p{
             font-style: 13px;
@@ -44,6 +50,10 @@
             &:nth-of-type(3){
                 animation-delay: 1.3s;
             }
+
+            &:nth-of-type(4){
+              animation-delay: 1.4s;
+          }
         }
     }
 }

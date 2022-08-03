@@ -11,7 +11,7 @@ const Layout = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App min-h-screen bg-cyan-800">
       <button onClick={handleClick} id="menuToggle">
         <input type="checkbox" />
         <span id="span1"></span>

@@ -18,6 +18,71 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 const Career = () => {
+  const toggleInternship = (event) => {
+    //Try all the elements with the id 'internshipCard' and catch the error
+    try {
+      const internshipCard = document.querySelectorAll('.internshipCard')
+      const internshipBtn = document.querySelectorAll('.internshipBtn')
+      internshipCard.forEach((el) => {
+        el.classList.toggle('hidden')
+      })
+      internshipBtn.forEach((el) => {
+        el.classList.toggle('bg-[#ffeba7]')
+        el.classList.toggle('bg-white')
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  const toggleSeasonal = (event) => {
+    //Try all the elements with the id 'seasonalCard' and catch the error
+    try {
+      const seasonalCard = document.querySelectorAll('.seasonalCard')
+      const seasonalBtn = document.querySelectorAll('.seasonalBtn')
+      seasonalCard.forEach((el) => {
+        el.classList.toggle('hidden')
+      })
+      seasonalBtn.forEach((el) => {
+        el.classList.toggle('bg-[#ffeba7]')
+        el.classList.toggle('bg-white')
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  const toggleAll = (event) => {
+    //Try all the elements with the id 'allCard' and catch the error
+    try {
+      const internshipCard = document.querySelectorAll('.internshipCard')
+      const internshipBtn = document.querySelectorAll('.internshipBtn')
+      const seasonalCard = document.querySelectorAll('.seasonalCard')
+      const seasonalBtn = document.querySelectorAll('.seasonalBtn')
+      internshipCard.forEach((el) => {
+        if(el.classList.contains('hidden')){
+          el.classList.toggle('hidden')
+        }
+      })
+      internshipBtn.forEach((el) => {
+        if(el.classList.contains('bg-white')){
+          el.classList.toggle('bg-white')
+          el.classList.add('bg-[#ffeba7]')
+        }
+      })
+      seasonalCard.forEach((el) => {
+        if(el.classList.contains('hidden')){
+          el.classList.toggle('hidden')
+        }
+      })
+      seasonalBtn.forEach((el) => {
+        if(el.classList.contains('bg-white')){
+          el.classList.toggle('bg-white')
+          el.classList.add('bg-[#ffeba7]')
+        }
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
   const { t } = useTranslation()
   const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -33,7 +98,27 @@ const Career = () => {
 
   return (
     <>
-      <div className="container career-page">
+      <div className="container career-page pt-8">
+        <div className="flex space-x-4 lg:justify-center pb-8">
+        <button
+            onClick={toggleAll}
+            className="allBtn btn border-none text-black bg-white hover:text-white btn-xs sm:btn-sm md:btn-md"
+          >
+            {t('careerPage.all')}
+          </button>
+          <button
+            onClick={toggleInternship}
+            className="internshipBtn btn border-none text-black hover:text-white bg-[#ffeba7] btn-xs sm:btn-sm md:btn-md"
+          >
+            {t('careerPage.internship')}
+          </button>
+          <button
+            onClick={toggleSeasonal}
+            className="seasonalBtn btn border-none text-black hover:text-white bg-[#ffeba7] btn-xs sm:btn-sm md:btn-md"
+          >
+            {t('careerPage.seasonal_job')}
+          </button>
+        </div>
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -46,7 +131,8 @@ const Career = () => {
         <div className="career-timeline">
           <VerticalTimeline>
             <VerticalTimelineElement
-              className="vertical-timeline-element--work"
+              id="internshipCards"
+              className="internshipCard vertical-timeline-element--work"
               contentStyle={{
                 background: 'rgb(33, 150, 243)',
                 color: '#fff',
@@ -82,14 +168,30 @@ const Career = () => {
                 l'entrepreneuriat. dans l'entreprenariat.
               </p>
               <p className="vertical-timeline-technos">
-                <FontAwesomeIcon className='technologiesIcons' icon={faReact} color="#5ED4F4" />
-                <FontAwesomeIcon className='technologiesIcons' icon={faHtml5} color="#5ED4F4" />
-                <FontAwesomeIcon className='technologiesIcons' icon={faNodeJs} color="#5ED4F4" />
-                <FontAwesomeIcon className='technologiesIcons' icon={faJsSquare} color="#5ED4F4" />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faReact}
+                  color="#5ED4F4"
+                />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faHtml5}
+                  color="#5ED4F4"
+                />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faNodeJs}
+                  color="#5ED4F4"
+                />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faJsSquare}
+                  color="#5ED4F4"
+                />
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              className="vertical-timeline-element--work"
+              className="internshipCard vertical-timeline-element--work"
               contentStyle={{
                 background: 'rgb(33, 150, 243)',
                 color: '#fff',
@@ -112,7 +214,7 @@ const Career = () => {
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              className="vertical-timeline-element--work"
+              className="seasonalCard vertical-timeline-element--work"
               date="2008 - 2010"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<faHome />}
@@ -124,7 +226,7 @@ const Career = () => {
               <p>User Experience, Visual Design</p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
-              className="vertical-timeline-element--work"
+              className="seasonalCard vertical-timeline-element--work"
               date="2006 - 2008"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
               icon={<faHome />}
