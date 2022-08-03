@@ -27,6 +27,7 @@ const Career = () => {
         el.classList.toggle('hidden')
       })
       internshipBtn.forEach((el) => {
+        el.classList.toggle('bg-[#ffeba7]')
         el.classList.toggle('bg-white')
       })
     } catch (error) {
@@ -42,6 +43,7 @@ const Career = () => {
         el.classList.toggle('hidden')
       })
       seasonalBtn.forEach((el) => {
+        el.classList.toggle('bg-[#ffeba7]')
         el.classList.toggle('bg-white')
       })
     } catch (error) {
@@ -63,6 +65,7 @@ const Career = () => {
       internshipBtn.forEach((el) => {
         if(el.classList.contains('bg-white')){
           el.classList.toggle('bg-white')
+          el.classList.add('bg-[#ffeba7]')
         }
       })
       seasonalCard.forEach((el) => {
@@ -73,6 +76,7 @@ const Career = () => {
       seasonalBtn.forEach((el) => {
         if(el.classList.contains('bg-white')){
           el.classList.toggle('bg-white')
+          el.classList.add('bg-[#ffeba7]')
         }
       })
     } catch (error) {
