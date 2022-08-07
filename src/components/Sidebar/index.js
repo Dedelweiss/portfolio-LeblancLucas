@@ -2,7 +2,13 @@ import './index.scss'
 import { Link, NavLink } from 'react-router-dom'
 import LogoL from '../../assets/images/esr.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faHome, faUser, faTimeline } from '@fortawesome/free-solid-svg-icons'
+import {
+  faEnvelope,
+  faHome,
+  faUser,
+  faTimeline,
+  faDiagramProject,
+} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = () => {
@@ -40,6 +46,14 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faTimeline} color="#4d4d4e" />
         </NavLink>
+        {/* <NavLink
+          exact="true"
+          activeclassname="active"
+          className="projects-link"
+          to="/projects"
+        >
+          <FontAwesomeIcon icon={faDiagramProject} color="#4d4d4e" />
+        </NavLink> */}
       </nav>
 
       <ul>
