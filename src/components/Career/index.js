@@ -15,7 +15,15 @@ import {
   faJsSquare,
   faNodeJs,
   faReact,
+  faJira,
+  faSass,
+  faVuejs,
 } from '@fortawesome/free-brands-svg-icons'
+import {
+  faBriefcase,
+  faTerminal,
+  faSun,
+} from '@fortawesome/free-solid-svg-icons'
 
 const Career = () => {
   const toggleInternship = (event) => {
@@ -27,7 +35,7 @@ const Career = () => {
         el.classList.toggle('hidden')
       })
       internshipBtn.forEach((el) => {
-        el.classList.toggle('bg-[#ffeba7]')
+        el.classList.toggle('bg-[#2196F3]')
         el.classList.toggle('bg-white')
       })
     } catch (error) {
@@ -43,7 +51,7 @@ const Career = () => {
         el.classList.toggle('hidden')
       })
       seasonalBtn.forEach((el) => {
-        el.classList.toggle('bg-[#ffeba7]')
+        el.classList.toggle('bg-[#ff8320]')
         el.classList.toggle('bg-white')
       })
     } catch (error) {
@@ -58,25 +66,25 @@ const Career = () => {
       const seasonalCard = document.querySelectorAll('.seasonalCard')
       const seasonalBtn = document.querySelectorAll('.seasonalBtn')
       internshipCard.forEach((el) => {
-        if(el.classList.contains('hidden')){
+        if (el.classList.contains('hidden')) {
           el.classList.toggle('hidden')
         }
       })
       internshipBtn.forEach((el) => {
-        if(el.classList.contains('bg-white')){
+        if (el.classList.contains('bg-white')) {
           el.classList.toggle('bg-white')
-          el.classList.add('bg-[#ffeba7]')
+          el.classList.add('bg-[#2196F3]')
         }
       })
       seasonalCard.forEach((el) => {
-        if(el.classList.contains('hidden')){
+        if (el.classList.contains('hidden')) {
           el.classList.toggle('hidden')
         }
       })
       seasonalBtn.forEach((el) => {
-        if(el.classList.contains('bg-white')){
+        if (el.classList.contains('bg-white')) {
           el.classList.toggle('bg-white')
-          el.classList.add('bg-[#ffeba7]')
+          el.classList.add('bg-[#ff8320]')
         }
       })
     } catch (error) {
@@ -85,8 +93,8 @@ const Career = () => {
   }
   const { t } = useTranslation()
   const [letterClass, setLetterClass] = useState('text-animate')
-
   const careerArray = t('careerPage.career').split('')
+
   useEffect(() => {
     async function changeClass() {
       await setTimeout(() => {
@@ -96,11 +104,15 @@ const Career = () => {
     changeClass()
   }, [])
 
+  const activeModal = (event) => {
+    window.scroll({ top: 0, left: 0 })
+  }
+
   return (
     <>
       <div className="container career-page pt-8">
-        <div className="flex space-x-4 lg:justify-center pb-8">
-        <button
+        <div className="btns sm:flex  space-x-4 lg:justify-center pb-8">
+          <button
             onClick={toggleAll}
             className="allBtn btn border-none text-black bg-white hover:text-white btn-xs sm:btn-sm md:btn-md"
           >
@@ -108,17 +120,18 @@ const Career = () => {
           </button>
           <button
             onClick={toggleInternship}
-            className="internshipBtn btn border-none text-black hover:text-white bg-[#ffeba7] btn-xs sm:btn-sm md:btn-md"
+            className="internshipBtn btn border-none text-black hover:text-white bg-[#2196F3] btn-xs sm:btn-sm md:btn-md"
           >
             {t('careerPage.internship')}
           </button>
           <button
             onClick={toggleSeasonal}
-            className="seasonalBtn btn border-none text-black hover:text-white bg-[#ffeba7] btn-xs sm:btn-sm md:btn-md"
+            className="seasonalBtn btn border-none text-black hover:text-white bg-[#ff8320] btn-xs sm:btn-sm md:btn-md"
           >
             {t('careerPage.seasonal_job')}
           </button>
         </div>
+
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -128,6 +141,7 @@ const Career = () => {
             />
           </h1>
         </div>
+
         <div className="career-timeline">
           <VerticalTimeline>
             <VerticalTimelineElement
@@ -142,7 +156,7 @@ const Career = () => {
               }}
               date="Septembre 2021 - Février 2022"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<faHome />}
+              icon={<FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />}
             >
               <h2 className="vertical-timeline-element-title">
                 {t('careerPage.internship')}
@@ -150,7 +164,9 @@ const Career = () => {
               <h3 className="vertical-timeline-element-title">
                 Co-fondateur et Développeur
               </h3>
-              <h4 className="vertical-timeline-element-subtitle">Roumanie</h4>
+              <h4 className="vertical-timeline-element-subtitle">
+                Université de Bucarest - Roumanie
+              </h4>
               <p className="vertical-timeline-text">
                 Plateforme née de l'idée de 5 étudiants en ingénierie de l'école
                 d'ingénieur CESI, dont moi-même. Cette opportunité nous a permis
@@ -167,27 +183,86 @@ const Career = () => {
                 CESI, tant dans le domaine du développement que de
                 l'entrepreneuriat. dans l'entreprenariat.
               </p>
+              <div className="pt-4">
+                <label
+                  onClick={activeModal}
+                  htmlFor="my-modal-6"
+                  id="btn"
+                  className="btn modal-button"
+                >
+                  Voir plus
+                </label>
+                <input
+                  type="checkbox"
+                  id="my-modal-6"
+                  className="modal-toggle"
+                />
+                <div className="modal modal-bottom sm:modal-middle">
+                  <div className="modal-box">
+                    <h3 className="font-bold text-lg">
+                      Congratulations random Internet user!
+                    </h3>
+                    <p className="py-4">
+                      You've been selected for a chance to get one year of
+                      subscription to use Wikipedia for free!
+                    </p>
+                    <div className="modal-action">
+                      <label htmlFor="my-modal-6" className="btn">
+                        Yay!
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <p className="vertical-timeline-technos">
                 <FontAwesomeIcon
                   className="technologiesIcons"
                   icon={faReact}
-                  color="#5ED4F4"
+                  color="#61dbfb"
                 />
                 <FontAwesomeIcon
                   className="technologiesIcons"
                   icon={faHtml5}
-                  color="#5ED4F4"
+                  color="#f25320"
                 />
                 <FontAwesomeIcon
                   className="technologiesIcons"
                   icon={faNodeJs}
-                  color="#5ED4F4"
+                  color="#7cc327"
                 />
                 <FontAwesomeIcon
                   className="technologiesIcons"
                   icon={faJsSquare}
-                  color="#5ED4F4"
+                  color="#ead41c"
                 />
+              </p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="seasonalCard vertical-timeline-element--work"
+              contentStyle={{
+                background: '#ff8320',
+                color: '#fff',
+              }}
+              contentArrowStyle={{
+                borderRight: '7px solid #ff8320',
+              }}
+              date="Août 2021"
+              iconStyle={{ background: '#ff8320', color: '#fff' }}
+              icon={<FontAwesomeIcon icon={faSun} color="#4d4d4e" />}
+            >
+              <h2 className="vertical-timeline-element-title">
+                {t('careerPage.seasonal_job')}
+              </h2>
+              <h3 className="vertical-timeline-element-title">
+                Technicien informatique
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Direction générale des Finances publiques - La Rochelle - France
+              </h4>
+              <p>
+                Emploi à la direction générale des finances publiques.
+                Manipulation de différentes maintenances et travail au service
+                "poste" et "CID".
               </p>
             </VerticalTimelineElement>
             <VerticalTimelineElement
@@ -201,87 +276,58 @@ const Career = () => {
               }}
               date="Janvier 2021 - Avril 2021"
               iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<faHome />}
+              icon={<FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />}
             >
-              <h2 className="vertical-timeline-element-title">Stage</h2>
-              <h3 className="vertical-timeline-element-title">Art Director</h3>
+              <h2 className="vertical-timeline-element-title">
+                {t('careerPage.internship')}
+              </h2>
+              <h3 className="vertical-timeline-element-title">
+                Assistant chef de projet et développeur
+              </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                San Francisco, CA
+                AM Créations - La Rochelle - France
               </h4>
               <p>
-                Creative Direction, User Experience, Visual Design, SEO, Online
-                Marketing
+                Pilotage du projet d'une association avec réalisation de
+                certaines briques de développement.
+              </p>
+              <p>
+                <label
+                  htmlFor="my-modal-6"
+                  id="btn"
+                  className="btn modal-button"
+                  onClick={activeModal}
+                >
+                  Voir plus
+                </label>
+              </p>
+              <p className="vertical-timeline-technos">
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faSass}
+                  color="#c36192"
+                />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faVuejs}
+                  color="#3eaf7c"
+                />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faJira}
+                  color="#247df2"
+                />
+                <FontAwesomeIcon
+                  className="technologiesIcons"
+                  icon={faJsSquare}
+                  color="#ead41c"
+                />
               </p>
             </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="seasonalCard vertical-timeline-element--work"
-              date="2008 - 2010"
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<faHome />}
-            >
-              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Los Angeles, CA
-              </h4>
-              <p>User Experience, Visual Design</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="seasonalCard vertical-timeline-element--work"
-              date="2006 - 2008"
-              iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-              icon={<faHome />}
-            >
-              <h3 className="vertical-timeline-element-title">Web Designer</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                San Francisco, CA
-              </h4>
-              <p>User Experience, Visual Design</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="April 2013"
-              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-              icon={<faHome />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Content Marketing for Web, Mobile and Social Media
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Online Course
-              </h4>
-              <p>Strategy, Social Media</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="November 2012"
-              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-              icon={<faHome />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Agile Development Scrum Master
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Certification
-              </h4>
-              <p>Creative Direction, User Experience, Visual Design</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--education"
-              date="2002 - 2006"
-              iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-              icon={<faHome />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Bachelor of Science in Interactive Digital Media Visual Imaging
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Bachelor Degree
-              </h4>
-              <p>Creative Direction, Visual Design</p>
-            </VerticalTimelineElement>
+
             <VerticalTimelineElement
               iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-              icon={<faHome />}
+              icon={<FontAwesomeIcon icon={faTerminal} color="#4d4d4e" />}
             />
           </VerticalTimeline>
         </div>

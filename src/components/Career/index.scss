@@ -3,6 +3,9 @@
     padding-top: 10%;
     margin-left: 15%;
     width: 80%;
+    .btns {
+      margin-top: 20%;
+    }
   }
   @media screen and (min-width: 1053px) {
     h1 {
@@ -15,6 +18,17 @@
         rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
   }
+
+
+.vertical-timeline-element-title  {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .vertical-timeline-element-subtitle  {
+    font-weight: bolder;
+    font-size: 15px;
+  }
+
   .vertical-timeline-text {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -23,11 +37,15 @@
     -webkit-box-orient: vertical;
   }
 
-  .vertical-timeline-technos{
-    
-    .technologiesIcons + .technologiesIcons{
-        margin-left: 10px;
+  .vertical-timeline-technos {
+    .technologiesIcons + .technologiesIcons {
+      margin-left: 10px;
     }
     font-size: 1.5rem;
+  }
+
+  .modal-box {
+    position: fixed;
+    top: 0;
   }
 }
