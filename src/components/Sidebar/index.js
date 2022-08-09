@@ -46,14 +46,14 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faTimeline} color="#4d4d4e" />
         </NavLink>
-        {/* <NavLink
+        <NavLink
           exact="true"
           activeclassname="active"
           className="projects-link"
           to="/projects"
         >
           <FontAwesomeIcon icon={faDiagramProject} color="#4d4d4e" />
-        </NavLink> */}
+        </NavLink>
       </nav>
 
       <ul>
