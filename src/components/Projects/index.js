@@ -4,124 +4,32 @@ import Loader from 'react-loaders'
 const Projects = () => {
   return (
     <>
-      <div className="container projects-page pt-8">
-        <div class="canvas-wrapper">
-          <a href="#" class="canvas">
-            <div class="canvas_border">
-              <svg>
-                <defs>
-                  <linearGradient
-                    id="grad-orange"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color:rgb(253,137,68);stop-opacity:1"
-                    ></stop>
-                    <stop
-                      offset="100%"
-                      style="stop-color:rgb(153,75,23);stop-opacity:1"
-                    ></stop>
-                  </linearGradient>
-                  <linearGradient
-                    id="grad-red"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#D34F48"></stop>
-                    <stop offset="100%" stop-color="#772522"></stop>
-                  </linearGradient>
-                </defs>
-                <rect
-                  id="rect-grad"
-                  class="rect-gradient"
-                  fill="none"
-                  stroke="url(#grad-orange)"
-                  stroke-linecap="square"
-                  stroke-width="4"
-                  stroke-miterlimit="30"
-                  width="100%"
-                  height="100%"
-                ></rect>
-              </svg>
+      <div className="container projects-page pt-8 pb-8 px-24 ">
+        <div class="grid grid-cols-2 gap-24">
+          <div class="card rounded-3xl overflow-hidden image-full shadow-lg">
+            <figure>
+              <img src={require('../../assets/images/projects/Roumanie.png')} alt="Romania" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
             </div>
-            <div class="canvas_img-wrapper">
-              <img
-                class="canvas_img"
-                src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png"
-                alt=""
-              />
+          </div>
+          <div class="card rounded-3xl overflow-hidden image-full shadow-lg">
+            <figure>
+              <img src={require('../../assets/images/projects/voitureAutonome.jpg')} alt="Romania" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
             </div>
-            <div class="canvas_copy canvas_copy--left">
-              <span class="canvas_copy_subtitle">Heading</span>
-              <strong class="canvas_copy_title">Hello</strong>
-              <strong class="canvas_copy_title">World</strong>
-              <span class="canvas_copy_details">Details and stuff</span>
-            </div>
-          </a>
-          <a href="#" class="canvas">
-            <div class="canvas_border">
-              <svg>
-                <defs>
-                  <linearGradient
-                    id="grad-orange"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color:rgb(253,137,68);stop-opacity:1"
-                    ></stop>
-                    <stop
-                      offset="100%"
-                      style="stop-color:rgb(153,75,23);stop-opacity:1"
-                    ></stop>
-                  </linearGradient>
-                  <linearGradient
-                    id="grad-red"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%"
-                  >
-                    <stop offset="0%" stop-color="#D34F48"></stop>
-                    <stop offset="100%" stop-color="#772522"></stop>
-                  </linearGradient>
-                </defs>
-                <rect
-                  id="rect-grad"
-                  class="rect-gradient"
-                  fill="none"
-                  stroke="url(#grad-orange)"
-                  stroke-linecap="square"
-                  stroke-width="4"
-                  stroke-miterlimit="30"
-                  width="100%"
-                  height="100%"
-                ></rect>
-              </svg>
-            </div>
-            <div class="canvas_img-wrapper">
-              <img
-                class="canvas_img"
-                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/249772/Twitter_Logo_Blue.png"
-                alt=""
-              />
-            </div>
-            <div class="canvas_copy">
-              <span class="canvas_copy_subtitle">Heading</span>
-              <strong class="canvas_copy_title">Hello</strong>
-              <strong class="canvas_copy_title">World</strong>
-              <span class="canvas_copy_details">Details and stuff</span>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
       <Loader type="line-scale-pulse-out-rapid" />
