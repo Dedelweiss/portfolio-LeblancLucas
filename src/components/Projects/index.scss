@@ -1,12 +1,65 @@
 .card {
   cursor: pointer;
+  background-color:rgba(0, 0, 0, 0.5);
+.card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
 }
-.card:hover {
+.card-subtitle{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+p{
+  font-size: 1rem;
+  color: white;
+}
+.technologiesIcons{
+  font-size: 3rem;
+}
+  &:hover {
     img {
       visibility: hidden;
     }
+    
+    .card-body {
+      visibility: visible;
+    }
   }
 
-  .card.image-full:before {
-    opacity: 0;
+  .card-body {
+    visibility: hidden;
   }
+}
+
+.card.image-full:before {
+  opacity: 0;
+}
+
+
+// TEST
+#container {
+  perspective: 40px;
+}
+
+#inner {
+  width: 20em;
+  height: 18em;
+  background-color: white;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
+}
+
+#helper {
+  color: white;
+  padding: 0.2em;
+  border-radius: 5%;
+  background-color: grey;
+  
+  position: absolute;
+  z-index: 0;
+}
+
+.hidden {
+  display: none;
+}
