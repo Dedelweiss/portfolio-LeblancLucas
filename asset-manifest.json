@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.71683aca.css",
-    "main.js": "/static/js/main.d792f599.js",
+    "main.css": "/static/css/main.56e28a2e.css",
+    "main.js": "/static/js/main.fa702047.js",
     "static/js/787.3d2c5248.chunk.js": "/static/js/787.3d2c5248.chunk.js",
     "static/media/profilImgHome.jpg": "/static/media/profilImgHome.11f474fab08b2b267e8b.jpg",
     "static/media/voitureAutonome.jpg": "/static/media/voitureAutonome.7f2ae16edd30ff3b8f69.jpg",
@@ -12,12 +12,12 @@
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "static/media/esr.webp": "/static/media/esr.ac68fad8637a4adfc874.webp",
     "index.html": "/index.html",
-    "main.71683aca.css.map": "/static/css/main.71683aca.css.map",
-    "main.d792f599.js.map": "/static/js/main.d792f599.js.map",
+    "main.56e28a2e.css.map": "/static/css/main.56e28a2e.css.map",
+    "main.fa702047.js.map": "/static/js/main.fa702047.js.map",
     "787.3d2c5248.chunk.js.map": "/static/js/787.3d2c5248.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71683aca.css",
-    "static/js/main.d792f599.js"
+    "static/css/main.56e28a2e.css",
+    "static/js/main.fa702047.js"
   ]
 }
