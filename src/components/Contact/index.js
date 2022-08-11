@@ -7,7 +7,7 @@ import './index.scss'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useTranslation } from 'react-i18next'
-import ReCAPTCHA from 'react-google-recaptcha'
+// import ReCAPTCHA from 'react-google-recaptcha'
 
 const Contact = () => {
   const { t } = useTranslation()
@@ -15,15 +15,15 @@ const Contact = () => {
   const form = useRef()
   const contactMeArray = t('contact_me').split('')
   const [confirmEmail, setConfirmEmail] = useState(false)
-  const [confirmCaptcha, setConfirmCaptcha] = useState(null)
-  const captchaSiteKey = '6LfMoGkhAAAAABzZu2RTPtU1JibMGIZRUI20ogQv'
+  // const [confirmCaptcha, setConfirmCaptcha] = useState(null)
+  // const captchaSiteKey = '6LfMoGkhAAAAABzZu2RTPtU1JibMGIZRUI20ogQv'
 
   const handleConfirmEmail = () => {
     setConfirmEmail(!confirmEmail)
   }
-  const handleCaptcha = (value) => {
-    setConfirmCaptcha(value)
-  }
+  // const handleCaptcha = (value) => {
+  //   setConfirmCaptcha(value)
+  // }
 
   useEffect(() => {
     async function changeClass() {
@@ -154,12 +154,12 @@ const Contact = () => {
                       </label>
                     </div>
                   </li>
-                  <li>
+                  {/* <li>
                     <ReCAPTCHA
                       sitekey={captchaSiteKey}
                       onChange={handleCaptcha}
                     />
-                  </li>
+                  </li> */}
                   <li>
                     <input
                       type="submit"
