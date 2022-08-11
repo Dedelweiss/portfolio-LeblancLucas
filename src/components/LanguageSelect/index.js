@@ -10,33 +10,31 @@ const LanguageSelect = () => {
   return (
     <>
       <div className="sec-center">
-        <input
-          className="dropdown"
-          type="checkbox"
-          id="dropdown"
-          name="dropdown"
-        />
-        <label className="for-dropdown" htmlFor="dropdown">
-          {t('language')}
-        </label>
-        <div className="section-dropdown">
-          {Object.keys(lngs).map((lng) => (
-            <button
-              className="langueBtn"
-              key={lng}
-              style={{
-                fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal',
-                backgroundColor:
-                  i18n.resolvedLanguage === lng ? '#ffeba7' : 'transparent',
-                  color: 
-                  i18n.resolvedLanguage === lng ? 'black' : 'white'
-              }}
-              type="submit"
-              onClick={() => i18n.changeLanguage(lng)}
-            >
-              {lngs[lng].nativeName}
-            </button>
-          ))}
+        <div className="dropdown dropdown-hover dropdown-end">
+          <label tabIndex="0" className="btn w-12 m-1">
+            {t('language')}
+          </label>
+          <ul
+            tabIndex="0"
+            className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-40"
+          >
+            {Object.keys(lngs).map((lng) => (
+              <button
+                className="langueBtn"
+                key={lng}
+                style={{
+                  fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal',
+                  backgroundColor:
+                    i18n.resolvedLanguage === lng ? '#ffeba7' : 'transparent',
+                  color: i18n.resolvedLanguage === lng ? 'black' : 'white',
+                }}
+                type="submit"
+                onClick={() => i18n.changeLanguage(lng)}
+              >
+                {lngs[lng].nativeName}
+              </button>
+            ))}
+          </ul>
         </div>
       </div>
     </>

@@ -21,6 +21,9 @@
     "seasonal_job": "Seasonal job",
     "all": "Show all"
   },
+  "contactPage": {
+    "confirm_email": "Check this if you wish to receive an email confirmation of receipt"
+  },
   "aboutPage": {
     "about_me": "About me",
     "hobbies": "My hobbies",
@@ -28,5 +31,10 @@
     "paragraph2": "I have been lucky enough to move around a lot in my life, from the coolness of the English Channel (Finistère and Normandy) and Eastern Europe (Romania) to the warmer temperatures of the islands and the South West (Polynesia and Charente-Maritime). So these trips have taught me a lot and have fuelled my thirst for new experiences.",
     "paragraph3": "There are many, the main one being sport, and mainly running. Indeed, I like running since I was young, either during trails or cross-country races in my region. So, I take a lot of pleasure in looking for new paths in the mountains or in the forest but also in finding new techniques to optimize my endurance for example.",
     "paragraph4": "My passion for aviation and space has also always been present and part of my ultimate dreams. I often read about current events and innovations in these fields and I sometimes enjoy talking to other enthusiasts."
+  },
+  "projectsPage": {
+    "mankyan_project":"Cette plateforme est née de l'idée de 5 étudiants en ingénierie de l'école d'ingénieur CESI. Cette opportunité nous a permis de remplacer le stage de 4ème année par un projet entrepreneurial. J'ai donc travaillé 4 mois à l'Université de Bucarest sur ce projet de plateforme web avec les 4 membres de mon équipe. Cela m'a permis de travailler sur mes connaissances dans le domaine de l'entrepreneuriat, du développement de projet mais aussi dans le contact avec des acteurs externes ou des partenaires potentiels lors d'un projet. Ces quelques mois m'ont également permis de renforcer mon anglais, tant au sein du groupe qu'avec les personnes rencontrées en Roumanie. Cela m'a également permis de travailler avec différents partenaires du CESI, tanT dans le domaine du développement que de l'entrepreneuriat. dans l'entreprenariat. Ainsi, aujourd'hui encore, nous recherchons des partenaires dans l'édition de mangas.",
+    "carProject": "The aim of this project was to create a prototype of an autonomous car able to move around a city and to search for available parking spaces. For the realization of this car we used an arduino which allowed to analyze the information of the sensors in order to change the actions of the motors. During this project we also created an interface in Java and Swing to display the position of the car and the available parking spaces in real time. Indeed, the car communicated its position to the computer via a radio transmitter. The roads of the city were modelled by black lines and the car could follow them thanks to a black and white sensor. Thus, the path that the car had to follow was designated manually and calculated automatically thanks to the Dijkstra algorithm which allows to find the shortest path.",
+    "not_available": "The description is not yet available"
   }
 }

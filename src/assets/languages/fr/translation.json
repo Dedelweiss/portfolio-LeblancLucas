@@ -15,6 +15,9 @@
   "contact_name": "Nom",
   "contact_subject": "Sujet",
   "contact_send": "ENVOYER",
+  "contactPage": {
+    "confirm_email": "Cocher ceci si vous souhaitez recevoir un email de confirmation de réception"
+  },
   "careerPage": {
     "career": "Parcours",
     "internship": "Stage",
@@ -28,5 +31,10 @@
     "paragraph2": "J’ai eu la chance de beaucoup déménager durant ma vie, de la fraicheur de la Manche (Finistère et Normandie) et de l'est de l'Europe (Roumanie) aux températures plus élevées des îles et du sud-ouest ( Polynésie et Charente-Maritime). Ainsi ces voyages m'ont beaucoup appris et ont attisé ma soif de nouvelles expériences.",
     "paragraph3": "Ils sont nombreux, le principal étant le sport, et essentiellement la course à pied. En effet, j’aime courir depuis mon plus jeune âge, que ça soit lors de trails ou de cross de ma région. Ainsi, je prends beaucoup de plaisirs à chercher de nouveaux chemins en montagne ou en forêt mais également trouver de nouvelles techniques afin d’optimiser mon endurance par exemple.",
     "paragraph4": "Ma passion pour l’aviation et l’espace a également toujours été présente et partie de mes rêves ultimes. Mes lectures s'orientent souvent sur l'actualité, les innovations dans ces domaines et j'apprécie d'échanger parfois avec d'autres passionnés."
+  },
+  "projectsPage": {
+    "mankyan_project":"Cette plateforme est née de l'idée de 5 étudiants en ingénierie de l'école d'ingénieur CESI. Cette opportunité nous a permis de remplacer le stage de 4ème année par un projet entrepreneurial. J'ai donc travaillé 4 mois à l'Université de Bucarest sur ce projet de plateforme web avec les 4 membres de mon équipe. Cela m'a permis de travailler sur mes connaissances dans le domaine de l'entrepreneuriat, du développement de projet mais aussi dans le contact avec des acteurs externes ou des partenaires potentiels lors d'un projet. Ces quelques mois m'ont également permis de renforcer mon anglais, tant au sein du groupe qu'avec les personnes rencontrées en Roumanie. Cela m'a également permis de travailler avec différents partenaires du CESI, tanT dans le domaine du développement que de l'entrepreneuriat. dans l'entreprenariat. Ainsi, aujourd'hui encore, nous recherchons des partenaires dans l'édition de mangas.",
+    "carProject": "Le but de ce projet était de créer un prototype de voiture autonome capable de se déplacer dans une ville et de rechercher les places de parking disponibles. Pour la réalisation de cette voiture nous avons utilisé un arduino qui permettait d'analyser les infos des capteurs afin de changer les actions des moteurs. Lors de ce projet nous avons également créé une interface en Java et Swing pour afficher la position de la voiture et les places de parking disponibles en temps réel. En effet, la voiture communiquait sa position à l'ordinateur via un émetteur radio. Les routes de la ville étaient modélisés par des lignes noires et la voiture pouvait les suivre grâce à un capteur noir et blanc.Ainsi, le chemin que devait parcourir la voiture était désigné manuellement et calculé automatiquement grâce à l'algorithme de Dijkstra qui permet de trouver le chemin le plus court.",
+    "not_available": "La description n'est pas encore disponible"
   }
 }
