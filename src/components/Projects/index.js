@@ -7,16 +7,68 @@ import {
   faSass,
   faJs,
   faDev,
-  faAngular
+  faAngular,
 } from '@fortawesome/free-brands-svg-icons'
 import { SiArduino, SiTailwindcss } from 'react-icons/si'
 import { useTranslation } from 'react-i18next'
 import { faFlagCheckered } from '@fortawesome/free-solid-svg-icons'
+import EmbedVideo from './EmbedVideo'
+import { useRef } from 'react'
 
 const Projects = () => {
+  const video = useRef()
+  const pauseVideo = () => {
+    //at the place of pauseVideo you can use "stopVideo", "playVideo"
+    video.current.contentWindow.postMessage(
+      '{"event":"command","func":"pauseVideo","args":""}',
+      '*'
+    )
+  }
   const { t } = useTranslation()
   return (
     <>
+      {/* Modals */}
+      {/* Modal for Mankyan project */}
+      <input type="checkbox" id="demoMankyan" className="modal-toggle" />
+      <div className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">
+            Congratulations random Internet user!
+          </h3>
+          <p className="py-4">
+            You've been selected for a chance to get one year of subscription to
+            use Wikipedia for free!
+          </p>
+          <div className="modal-action">
+            <label htmlFor="demoMankyan" className="btn">
+              Yay!
+            </label>
+          </div>
+        </div>
+      </div>
+      {/* Modal for Car project */}
+      <input type="checkbox" id="demoCar" className="modal-toggle" />
+      <div className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">
+            Demo du project de la voiture d'autonome
+          </h3>
+          <p className="py-4">
+            <EmbedVideo ref={video} id="myVideoId" embedId="1cSbPpQQ--Q" />
+          </p>
+          <div className="modal-action">
+            <label
+              onClick={() => {
+                pauseVideo()
+              }}
+              htmlFor="demoCar"
+              className="btn"
+            >
+              Yay!
+            </label>
+          </div>
+        </div>
+      </div>
       <div className="container projects-page pt-8 pb-8 px-24 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
           <div className="card rounded-3xl overflow-hidden image-full shadow-2xl">
@@ -43,11 +95,11 @@ const Projects = () => {
               <h2 className="card-subtitle">
                 Personal Project - Sept. 2021 → Present
               </h2>
-              <p>
-                {t('projectsPage.mankyan_project')}
-              </p>
+              <p>{t('projectsPage.mankyan_project')}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Demo</button>
+                <label for="demoMankyan" class="btn btn-primary modal-button">
+                  Demo
+                </label>
                 <a
                   href="https://la-rochelle.cesi.fr/direction-la-roumanie-pour-5-eleves-entrepreneurs/"
                   target="_blank"
@@ -59,7 +111,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="card rounded-3xl overflow-hidden image-full shadow-2xl">
             <figure>
               <img
@@ -94,7 +146,9 @@ const Projects = () => {
                 </div>
               </div>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Demo</button>
+                <label for="demoCar" class="btn btn-primary modal-button">
+                  Demo
+                </label>
                 <a
                   href="https://la-rochelle.cesi.fr/projet-etudiant-construire-une-voiture-autonome/"
                   target="_blank"
@@ -190,7 +244,7 @@ const Projects = () => {
               <h2 className="card-subtitle">
                 Personal project - June 2022 → Present
               </h2>
-              <p className='flex flex-col md:flex-row'>
+              <p className="flex flex-col md:flex-row">
                 {t('projectsPage.not_available')}
                 <iframe
                   title="Geam"
@@ -242,7 +296,7 @@ const Projects = () => {
               <h2 className="card-subtitle">
                 Personal project - Aug. 2022 → Present
               </h2>
-              <p className='flex flex-col md:flex-row'>
+              <p className="flex flex-col md:flex-row">
                 {t('projectsPage.not_available')}
                 <iframe
                   title="Geam"

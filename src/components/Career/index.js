@@ -110,6 +110,23 @@ const Career = () => {
 
   return (
     <>
+      <input type="checkbox" id="modalMankyan" className="modal-toggle" />
+      <div className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">
+            Congratulations random Internet user!
+          </h3>
+          <p className="py-4">
+            You've been selected for a chance to get one year of subscription to
+            use Wikipedia for free!
+          </p>
+          <div className="modal-action">
+            <label htmlFor="modalMankyan" className="btn">
+              Yay!
+            </label>
+          </div>
+        </div>
+      </div>
       <div className="container career-page pt-8">
         <div className="btns sm:flex  space-x-4 lg:justify-center pb-8">
           <button
@@ -186,33 +203,12 @@ const Career = () => {
               <div className="pt-4">
                 <label
                   onClick={activeModal}
-                  htmlFor="my-modal-6"
+                  htmlFor="modalMankyan"
                   id="btn"
                   className="btn modal-button"
                 >
                   Voir plus
                 </label>
-                <input
-                  type="checkbox"
-                  id="my-modal-6"
-                  className="modal-toggle"
-                />
-                <div className="modal modal-bottom sm:modal-middle">
-                  <div className="modal-box">
-                    <h3 className="font-bold text-lg">
-                      Congratulations random Internet user!
-                    </h3>
-                    <p className="py-4">
-                      You've been selected for a chance to get one year of
-                      subscription to use Wikipedia for free!
-                    </p>
-                    <div className="modal-action">
-                      <label htmlFor="my-modal-6" className="btn">
-                        Yay!
-                      </label>
-                    </div>
-                  </div>
-                </div>
               </div>
               <p className="vertical-timeline-technos">
                 <FontAwesomeIcon

@@ -3,7 +3,9 @@
     margin: 0 -30% 0;
   }
 }
-
+.modal-box{
+  max-width: 64rem;
+}
 .card {
   cursor: pointer;
   background-color:rgba(0, 0, 0, 0.5);
@@ -23,6 +25,10 @@ p{
 }
 .technologiesIcons{
   font-size: 3rem;
+  &:hover{
+    transform: scale(1.25);
+    transition-duration: 0.5s;
+  }
 }
   &:hover {
     img {
