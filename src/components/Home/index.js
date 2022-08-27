@@ -53,7 +53,7 @@ const Home = () => {
               href={require('../../assets/files/CV_LeblancLucas.pdf')}
               download="CV_LeblancLucas.pdf"
             >
-              DOWNLOAD CV test
+              DOWNLOAD CV
             </a>
             <Link to="/contact" className="contact-button homeBtns__col1">
               {t('contact_me_btn')}
