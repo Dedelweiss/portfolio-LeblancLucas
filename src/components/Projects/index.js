@@ -29,13 +29,13 @@ const Projects = () => {
     <>
       {/* Modals */}
       {/* Modal for Mankyan project */}
-      <input type="checkbox" id="demoMankyan" className="modal-toggle" />
-      <div className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg">
+      <input type="checkbox" id="demoMankyan" class="modal-toggle" />
+      <label for="demoMankyan" class="modal cursor-pointer">
+        <label class="modal-box relative" for="">
+          <h3 class="text-lg font-bold">
             Congratulations random Internet user!
           </h3>
-          <p className="py-4">
+          <p class="py-4">
             You've been selected for a chance to get one year of subscription to
             use Wikipedia for free!
           </p>
@@ -44,8 +44,8 @@ const Projects = () => {
               Yay!
             </label>
           </div>
-        </div>
-      </div>
+        </label>
+      </label>
       {/* Modal for Car project */}
       <input type="checkbox" id="demoCar" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
