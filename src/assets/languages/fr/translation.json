@@ -1,6 +1,8 @@
 {
   "hello": "Bonjour,",
-  "i_am": "Je m'appelle Leblanc Lucas",
+  "i_am": "Je m'appelle",
+  "surName": "Leblanc",
+  "firstName": "Lucas",
   "web_developer": "Développeur web",
   "full_stack": "Développeur web full stack, je me spécialise dans le développement web front-end",
   "contact_me_btn": "ME CONTACTER",

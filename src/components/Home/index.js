@@ -11,7 +11,9 @@ const Home = () => {
   const { t } = useTranslation()
   const [letterClass, setLetterClass] = useState('text-animate')
   const helloArray = t('hello').split('')
-  const nameArray = t('i_am').split('')
+  const iAmArray = t('i_am').split('')
+  const surNameArray = t('surName').split(' ')
+  const firstNameArray = t('firstName').split(' ')
   const jobArray = t('web_developer').split('')
 
   useEffect(() => {
@@ -34,20 +36,36 @@ const Home = () => {
               idx={6}
             ></AnimatedLetters>
             <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              idx={6}
-            ></AnimatedLetters>
-            <br />
+            <div>
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={iAmArray}
+                idx={6}
+              ></AnimatedLetters>
+              <div className='w-50'>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={surNameArray}
+                  idx={6}
+                ></AnimatedLetters>
+              </div>
+              <div>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={firstNameArray}
+                  idx={6}
+                ></AnimatedLetters>
+              </div>
+            </div>
+
             <AnimatedLetters
               letterClass={letterClass}
               strArray={jobArray}
-              idx={23}
+              idx={21}
             ></AnimatedLetters>
           </h1>
           <h2>{t('full_stack')}</h2>
-          <div className='homeBtns__row'>
+          <div className="homeBtns__row">
             <a
               className="download-button homeBtns__col1"
               href={require('../../assets/files/CV_LeblancLucas.pdf')}

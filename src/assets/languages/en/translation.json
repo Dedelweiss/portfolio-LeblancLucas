@@ -1,6 +1,8 @@
 {
   "hello": "Hello,",
-  "i_am": "I'm Leblanc Lucas",
+  "i_am": "I'm",
+  "surName": "Leblanc",
+  "firstName": "Lucas",
   "web_developer": "Web developer",
   "full_stack": "Full stack web developer, specialized in Front end",
   "contact_me_btn": "CONTACT ME",
